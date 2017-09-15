@@ -1,0 +1,5 @@
+package in.vamsoft.training.oopscon;
+
+public abstract class mech {
+
+}

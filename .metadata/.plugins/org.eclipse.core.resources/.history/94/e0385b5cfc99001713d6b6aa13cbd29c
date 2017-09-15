@@ -1,0 +1,26 @@
+package in.vamsoft.training.oops;
+
+public class SportsCar extends Car{
+
+	public SportsCar() {
+		System.out.println("SportsCar.SportsCar()");
+	}
+	
+	@Override
+	protected void stop() {
+		System.out.println("SportsCar.stop()");
+	}
+
+	@Override
+	protected void brake() {
+		System.out.println("SportsCar.brake()");
+	}
+	
+	@Override
+	protected void start() {
+		System.out.println("SportsCar.start()");
+	}
+	
+	
+
+}
