@@ -10,4 +10,8 @@ public abstract class Car extends Vehicle {
 	public void start() {
 		System.out.println("Car.start()");
 	}
+	public void handBrake()
+	{
+		System.out.println("Car.handBrake()");
+	}
 }
