@@ -30,4 +30,7 @@ public class SportsCar extends Car {
     System.out.println("SportsCar.fourWheelDrive()");
   }
 
+  public void handbrake() {
+    System.out.println("SportsCar.handbrake()");
+  }
 }

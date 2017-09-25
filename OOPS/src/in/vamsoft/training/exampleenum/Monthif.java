@@ -2,10 +2,17 @@ package in.vamsoft.training.exampleenum;
 
 import java.util.Scanner;
 
+/**
+ * This class contains details about Vehicle. Vehicle class as abstract and
+ * implements Driving interface.
+ * 
+ * @author vamsoft.
+ * @since 19/09/2017.
+ */
+
 public class Monthif {
 
   public static void main(String[] args) {
-
     int n;
     Scanner in = new Scanner(System.in);
     System.out.println("enter the n month");
