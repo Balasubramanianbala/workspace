@@ -93,6 +93,7 @@ public class MathFirst {
     int expected = 18;
     Assert.assertEquals(expected, result, 0);
   }
+
   @Test
   public void testcase8() {
     System.out.println("MathFirst.testcase8()");
