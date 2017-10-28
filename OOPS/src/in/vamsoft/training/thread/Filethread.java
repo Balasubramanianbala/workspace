@@ -20,7 +20,7 @@ class FiletextThread extends Thread{
   public void setNt(NumberThread nt) {
     this.nt = nt;
   }
- public void run() {
+ public void run() {    
    try {
      
      Scanner scanner = new Scanner(new File("src/text.txt"));
