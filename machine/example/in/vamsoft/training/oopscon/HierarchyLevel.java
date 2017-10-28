@@ -7,6 +7,8 @@ public class HierarchyLevel {
 		
 			tablefan tat= new tablefan();
 			System.out.println(tat);
+			//fan f=new fan();
+			
 
 
 	}

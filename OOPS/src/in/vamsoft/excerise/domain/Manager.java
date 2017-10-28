@@ -1,6 +1,7 @@
 package in.vamsoft.excerise.domain;
+import java.lang.NullPointerException;
 
-public class Manager extends Employee {
+public class Manager  extends Employee {
 
   private String deptname;
   
@@ -23,23 +24,30 @@ public class Manager extends Employee {
 
     @SuppressWarnings("static-access")
     public boolean addEmployee(int empId, String name,String ssn,double salary) {
+      
+      if(findemployee(empId)==true) {
+        System.out.println("employee already exists");
+        return false;
+      }else {
       this.staff[empCount]=new Employee(empId, name, ssn, salary);
       this.empCount++;
       return true;
+      }
       
     }
-    public void findemployee(int emp) {
+    public boolean  findemployee(int emp) {
       System.out.println("Manager.findemployee()");
-      
+      boolean temp = false;
       for(int i=0;i<20;i++) {
         if(this.staff[i].getEmpid() == emp) {
-          System.out.println("exists");
+//          System.out.println("exists");
+          temp=true;
         } else {
-          System.out.println("no");
+//          System.out.println("no");
+          temp=false;
         }
       }
-      //hbyh
-      
+      return temp;          
     }
 
   public String getDeptname() {

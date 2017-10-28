@@ -27,9 +27,9 @@ public class EmployeeTest {
     
     Manager mnn = new Manager();
     mnn.addEmployee(13, "jbkj", "hgfdcjhg", 54564);
-    mnn.addEmployee(16, "jbkj", "hgfdcjhg", 54564);
+    mnn.addEmployee(13, "jbkj", "hgfdcjhg", 54564);
     mnn.addEmployee(15, "jbkj", "hgfdcjhg", 54564);
-    mnn.findemployee(13);
+    
     mnn.printManagerDetails();
     
     

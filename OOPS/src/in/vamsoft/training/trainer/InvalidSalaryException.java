@@ -1,4 +1,4 @@
-package in.vamsoft.training.trainer;
+  package in.vamsoft.training.trainer;
 
 public class InvalidSalaryException extends Exception {
   

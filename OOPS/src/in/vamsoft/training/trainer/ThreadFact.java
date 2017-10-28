@@ -35,7 +35,6 @@ class Producer extends Thread {
           c.notify();
         }
         synchronized (this) {
-
           wait();
         }
       }
@@ -69,6 +68,7 @@ class Consumer extends Thread {
       } catch (InterruptedException e) {
         System.out.println(e);
       }
+      
       int fact = factorial(prod.getNum());
       System.out.println("Factorial calculated for" + prod.getNum() + ":" + fact);
       synchronized (prod) {
