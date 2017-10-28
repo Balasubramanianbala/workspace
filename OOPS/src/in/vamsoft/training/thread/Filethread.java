@@ -24,7 +24,7 @@ class FiletextThread extends Thread{
    try {
      
      Scanner scanner = new Scanner(new File("src/text.txt"));
-     
+             
      
       while(scanner.hasNextInt())
      {
