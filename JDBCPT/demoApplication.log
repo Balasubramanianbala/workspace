@@ -1,0 +1,50 @@
+[main] ERROR in.vamsoft.training.jdbcexample.FstjdbcDemo  - error while closing connection
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at in.vamsoft.training.jdbcexample.Dbpropertiescon.getConnection(Dbpropertiescon.java:29)
+	at in.vamsoft.training.jdbcexample.EmployeeJdbcimpl.<init>(EmployeeJdbcimpl.java:21)
+	at in.vamsoft.training.jdbcexample.EmployeeFactoryDao.getEmployeeDAO(EmployeeFactoryDao.java:6)
+	at in.vamsoft.training.jdbcexample.EmployeeMainUI.main(EmployeeMainUI.java:12)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
+	... 10 more
+Caused by: java.net.NoRouteToHostException: No route to host (Host unreachable)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
+	... 15 more
+[main] INFO  in.vamsoft.training.jdbcexample.FstjdbcDemo  - connection done
+[main] ERROR in.vamsoft.training.jdbcexample.EmployeeJdbcimpl  - error while establishing connection the connection
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:445)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:879)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:450)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:192)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:207)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1044)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1329)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3584)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3665)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1352)
+	at in.vamsoft.training.jdbcexample.EmployeeJdbcimpl.removeEmployee(EmployeeJdbcimpl.java:44)
+	at in.vamsoft.training.jdbcexample.EmployeeMainUI.main(EmployeeMainUI.java:27)

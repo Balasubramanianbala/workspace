@@ -33,10 +33,9 @@ class File1thread extends Thread{
       catch (FileNotFoundException e) {
 
       System.out.println("e");
-    } catch (IOException e) {
-     
-     e.printStackTrace();
-   }
+    } 
+    
+    
   }
   
 
